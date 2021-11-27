@@ -1,6 +1,5 @@
 package com.example.webapp.config;
 
-import com.example.webapp.service.CustomUserDetails;
 import com.example.webapp.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

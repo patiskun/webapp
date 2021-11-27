@@ -32,7 +32,7 @@ public class AppController {
         String encodedPassword = encoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         userRepository.save(user);
-        return "register_success";
+        return "index";
     }
 
     @GetMapping("/list_users")

@@ -5,20 +5,13 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-@Table(name = "usr")
+@Table(name = "doctor")
 @Data
 @Entity
-public class User {
+public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
-
-    @Column(nullable = false,unique = true, length = 45, name = "email")
-    private String email;
-
-    @Column(nullable = false, length = 64, name = "password")
-    private String password;
 
     @Column(nullable = false, length = 20, name = "firstName")
     private String firstname;
@@ -26,8 +19,13 @@ public class User {
     @Column(nullable = false, length = 20, name = "lastName")
     private String lastname;
 
-    @OneToMany
-    @JoinColumn(name = "user_id")
-    private List<Appointment>appointments;
+    @Column(nullable = false, length = 20, name = "type")
+    private String type;
 
+    @Column(nullable = false, name = "cabinet")
+    private int cabinet;
+
+    @OneToMany
+    @JoinColumn(name = "doctor_id")
+    private List<Appointment>appointments;
 }
