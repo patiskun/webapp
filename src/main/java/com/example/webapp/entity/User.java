@@ -7,7 +7,7 @@ import java.util.List;
 
 @Table(name = "usr")
 @Data
-@Entity
+@Entity(name = "usr")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,14 +20,14 @@ public class User {
     @Column(nullable = false, length = 64, name = "password")
     private String password;
 
-    @Column(nullable = false, length = 20, name = "firstName")
+    @Column(nullable = false, length = 20, name = "first_name")
     private String firstname;
 
-    @Column(nullable = false, length = 20, name = "lastName")
+    @Column(nullable = false, length = 20, name = "last_name")
     private String lastname;
 
     @OneToMany
     @JoinColumn(name = "user_id")
-    private List<Appointment>appointments;
+    private List<Appointment> appointments;
 
 }
