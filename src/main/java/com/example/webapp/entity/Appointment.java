@@ -2,9 +2,7 @@ package com.example.webapp.entity;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -27,4 +25,8 @@ public class Appointment {
     @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
     @Column(name = "a_date")
     private Date utilDate;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "doctor_id")
+    private List<Doctor> doctors;
 }

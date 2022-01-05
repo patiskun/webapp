@@ -30,6 +30,7 @@
                 <th>Email</th>
                 <th>first name</th>
                 <th>last name</th>
+                <th>appointments date</th>
             </tr>
             </thead>
             <tbody>
@@ -38,6 +39,9 @@
                     <td th:text="${user.email}">User email</td>
                     <td th:text="${user.firstname}">User first name</td>
                     <td th:text="${user.lastname}">User last name</td>
+                    <td>
+                        <div th:each="appointments : ${user.appointments}" th:text="${appointments.utilDate}"></div>
+                    </td>
                 </tr>
             </tbody>
         </table>

@@ -1,7 +1,6 @@
 package com.example.webapp.entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class User {
     @Column(nullable = false, length = 20, name = "last_name")
     private String lastname;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private List<Appointment> appointments;
 
