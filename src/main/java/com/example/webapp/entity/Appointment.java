@@ -23,10 +23,10 @@ public class Appointment {
     private Doctor doctor_id;
 
     @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
-    @Column(name = "a_date")
+    @Column(name = "a_date", columnDefinition = "TIMESTAMP")
     private Date utilDate;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "doctor_id")
-    private List<Doctor> doctors;
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "appointment_id")
+//    private List<Doctor> doctors;
 }

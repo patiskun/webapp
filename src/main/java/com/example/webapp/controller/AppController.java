@@ -30,6 +30,9 @@ public class AppController {
         return "index";
     }
 
+    @GetMapping("/index")
+    public String returnHomePage(){return "index";}
+
     @GetMapping("/register")
     public String showSignUpForm(Model model){
         model.addAttribute("user",new User());
@@ -69,6 +72,7 @@ public class AppController {
         var request = new AppointmentRequest();
         request.doctors = clinicService.getAllDoctors();
         request.users = clinicService.getAllUsers();
+
         model.addAttribute("appointment", new Appointment());
         model.addAttribute("request", request);
         return "add-appointment";
