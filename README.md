@@ -6,4 +6,4 @@
 
 пример работы программы на скриншотах
 
-![screenshot](C:\Users\patiskun\Desktop\1.png)
+<img src="https://imgur.com/4iAAIzl"/>
