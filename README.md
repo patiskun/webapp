@@ -6,4 +6,4 @@
 
 пример работы программы на скриншотах
 
-<img src="https://imgur.com/4iAAIzl"/>
+<img src="https://imgur.com/4iAAIzl"></img>
