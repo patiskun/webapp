@@ -6,4 +6,4 @@
 
 пример работы программы на скриншотах
 
-![Imgur](https://imgur.com/4iAAIzl)
+![Imgur](https://imgur.com/4iAAIzl.png)
