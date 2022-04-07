@@ -6,4 +6,4 @@
 
 пример работы программы на скриншотах
 
-<img src="C:\Users\patiskun\Desktop\1.png"></img>
+![screenshot](C:\Users\patiskun\Desktop\1.png)
